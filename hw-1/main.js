@@ -45,13 +45,13 @@ function get_intersection(...arrays) {
             if (i == shortest_i) {
                 continue;
             }
-            if (arrays[i].find(tmp_el) == undefined) {
+            if (arrays[i].indexOf(tmp_el) == -1) {
                 exists = false;
                 break;
             }
         }
         if (exists) {
-            result.concat(tmp_el);
+            result.push(tmp_el);
         }
     }
     return result;
@@ -80,6 +80,6 @@ function second() {
 
 }
 
-// first();
+first();
 second();
 
